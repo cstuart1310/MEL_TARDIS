@@ -1,0 +1,14 @@
+$minX=-100;
+$maxX=1;
+$minZ=-100;
+$maxZ=1;
+$cosVal=cos(frame/10);
+
+print($cosVal);
+setAttr mat_tardis.opacity $cosVal $cosVal $cosVal;
+mat_tardis.transmission=0-$cosVal;
+if ($cosVal<0){
+			tardis.translateX=rand($minX,$maxX);
+			tardis.translateZ=rand($minZ,$maxZ);
+}
+
